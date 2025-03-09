@@ -3,6 +3,8 @@ package dev.nau.rna_transcription;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.equalTo;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,4 +24,10 @@ public class RnaTranscriptionTest {
     public void testRnaTranscriptionOfCytosineIsGuanine() {
         assertThat(RnaTranscription.toRNA("C"), is(equalTo("G")));
     }
+
+    @Test
+    public void testRnaTranscriptionOfGuanineIsCytosine() {
+        assertThat(RnaTranscription.toRNA("G"), is(equalTo("C")));
+    }
+
 }
