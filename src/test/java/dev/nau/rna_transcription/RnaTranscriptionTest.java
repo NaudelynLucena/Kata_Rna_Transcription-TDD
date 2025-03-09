@@ -35,4 +35,9 @@ public class RnaTranscriptionTest {
         assertThat(RnaTranscription.toRNA("T"), is(equalTo("A")));
     }
 
+    @Test
+    public void testRnaTranscriptionOfAdenineIsUracil() {
+        assertThat(RnaTranscription.toRNA("A"), is(equalTo("U")));
+    }
+
 }
