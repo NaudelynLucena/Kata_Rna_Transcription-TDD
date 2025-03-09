@@ -40,4 +40,9 @@ public class RnaTranscriptionTest {
         assertThat(RnaTranscription.toRNA("A"), is(equalTo("U")));
     }
 
+    @Test
+    public void testInvalidNucleotideThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> { RnaTranscription.toRNA("X");});
+        }
+
 }
