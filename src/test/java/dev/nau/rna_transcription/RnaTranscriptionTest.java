@@ -30,4 +30,9 @@ public class RnaTranscriptionTest {
         assertThat(RnaTranscription.toRNA("G"), is(equalTo("C")));
     }
 
+    @Test
+    public void testRnaTranscriptionOfThymineIsAdenine() {
+        assertThat(RnaTranscription.toRNA("T"), is(equalTo("A")));
+    }
+
 }
